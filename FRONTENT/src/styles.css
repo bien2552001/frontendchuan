@@ -1,0 +1,64 @@
+
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to bottom left, #216E93, #21648A, #1F5881, #172D5B, #191C51);
+  color: white;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background: radial-gradient(circle, #237FA0 0%, #22789A 7.28%, #22789A 7.57%, #22789A 7.6%, #22789A 7.6%, #227296 12.93%, #227295 13.46%, #206389 29%, #1F527C 46.22%, #1D3868 72.2%, #1A1D52 100%);
+  background: linear-gradient(to bottom left, #216E93, #21648A, #1F5881, #172D5B, #191C51);*/
+  background: #0e0e0e;
+  /*background: white;*/
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+}
+/* You can add global styles to this file, and also import other style files */
+
+/*--------------------------------------------------------------
+  # Main
+  --------------------------------------------------------------*/
+#main {
+  margin-top: 45px;
+  padding: 10px 10px;
+  transition: all 0.2s;
+  min-height: 100vh;
+}
+
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 10px;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}

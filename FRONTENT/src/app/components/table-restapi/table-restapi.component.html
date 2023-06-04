@@ -1,0 +1,164 @@
+
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Data Tables</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item">Tables</li>
+        <li class="breadcrumb-item active">Get</li>
+      </ol>
+    </nav>
+  </div>
+  <section class="section ">
+
+    <!--<div class="row my-5 justify-content-center">
+    <div *ngIf="isLoading" class="spinner-grow text-danger" role="status"></div>-->
+    <div class="container-fluid bg-image">
+      <div class="row my-3">
+        <div class="col-auto">
+          <a class="btn btn-secondary" href="/test-data" role="button">Test Data</a>
+        </div>
+      </div>
+
+      <div class="my-3">
+        <form [formGroup]="signInForm" (ngSubmit)="getAll()">
+          <input type="text" formControlName="value" placeholder="Enter Fields">
+          <button type="submit">Get Data</button>
+        </form>
+      </div>
+
+      <div class="row justify-content-center ">
+        <div class="col-3 ">
+          <div class="spinner-border text-light mx-5" style="width: 2rem; height: 2rem;" role="status" *ngIf="isLoading">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row4" [hidden]="!allCurrent">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center"><b>TABLE OF DTSU666 VALUES</b></h5>
+                <table class="table shadow table-hover table-dark rounded" *ngIf="!isLoading && allCurrent">
+                  <thead>
+                    <tr class="text-center">
+                      <th scope="col">STT</th>
+                      <th scope="col">NAME</th>
+                      <th scope="col">A_sum</th>
+                      <th scope="col">A_imp</th>
+                      <th scope="col">A_exp</th>
+                      <th scope="col">Q1</th>
+                      <th scope="col">Q2</th>
+                      <th scope="col">Q3</th>
+                      <th scope="col">Q4</th>
+                      <th scope="col">Uab</th>
+                      <th scope="col">Ubc</th>
+                      <th scope="col">Uca</th>
+                      <th scope="col">Ua</th>
+                      <th scope="col">Ub</th>
+                      <th scope="col">Uc</th>
+                      <th scope="col">Ia</th>
+                      <th scope="col">Ib</th>
+                      <th scope="col">Ic</th>
+                      <th scope="col">Pft</th>
+                      <th scope="col">Pfa</th>
+                      <th scope="col">Pfb</th>
+                      <th scope="col">Pfc</th>
+                      <th scope="col">Qft</th>
+                      <th scope="col">Qfa</th>
+                      <th scope="col">Qfb</th>
+                      <th scope="col">Qfc</th>
+                      <th scope="col">Cosft</th>
+                      <th scope="col">Cosfa</th>
+                      <th scope="col">Cosfb</th>
+                      <th scope="col">Cosfc</th>
+                      <th scope="col">Hz</th>
+                      <th scope="col">Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center " *ngFor="let pullcurrent of allCurrent; let i = index;">
+                      <td>{{ i + 1 }}</td>
+                      <td>{{ pullcurrent.Name}}</td>
+                      <td>{{ pullcurrent.A_sum}}</td>
+                      <td>{{ pullcurrent.A_imp}}</td>
+                      <td>{{ pullcurrent.A_exp}}</td>
+                      <td>{{ pullcurrent.Q1}}</td>
+                      <td>{{ pullcurrent.Q2}}</td>
+                      <td>{{ pullcurrent.Q3}}</td>
+                      <td>{{ pullcurrent.Q4}}</td>
+                      <td>{{ pullcurrent.Uab}}</td>
+                      <td>{{ pullcurrent.Ubc}}</td>
+                      <td>{{ pullcurrent.Uca}}</td>
+                      <td>{{ pullcurrent.Ua}}</td>
+                      <td>{{ pullcurrent.Ub}}</td>
+                      <td>{{ pullcurrent.Uc}}</td>
+                      <td>{{ pullcurrent.Ia}}</td>
+                      <td>{{ pullcurrent.Ib}}</td>
+                      <td>{{ pullcurrent.Ic}}</td>
+                      <td>{{ pullcurrent.Pft}}</td>
+                      <td>{{ pullcurrent.Pfa}}</td>
+                      <td>{{ pullcurrent.Pfb}}</td>
+                      <td>{{ pullcurrent.Pfc}}</td>
+                      <td>{{ pullcurrent.Qft}}</td>
+                      <td>{{ pullcurrent.Qfa}}</td>
+                      <td>{{ pullcurrent.Qfb}}</td>
+                      <td>{{ pullcurrent.Qfc}}</td>
+                      <td>{{ pullcurrent.Cosft}}</td>
+                      <td>{{ pullcurrent.Cosfa}}</td>
+                      <td>{{ pullcurrent.Cosfb}}</td>
+                      <td>{{ pullcurrent.Cosfc}}</td>
+                      <td>{{ pullcurrent.Hz}}</td>
+                      <td>
+                        <div class="row  justify-content-arounded">
+                          <div class="col ">
+                            {{ pullcurrent.Date}}
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <div class="row my-5 justify-content-center">
+        <div class="col-auto">
+          <div *ngIf="!isLoading && !allCurrent" class="alert alert-danger" role="alert">
+            <p><i>There was an error loading the health check results. Please check your network connection and try again.</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<!---------------------------------------------------------Put------------------------------------------->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Put_Curent</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="signInForm">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Value</label>
+            <input type="text" class="form-control" id="recipient-name" formControlName="value" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" routerLink="/table">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- --------------------------------------------------------------------------------------------------------------- -->

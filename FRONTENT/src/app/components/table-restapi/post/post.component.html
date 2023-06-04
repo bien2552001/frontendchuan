@@ -1,0 +1,122 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Data Tables</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item">Tables</li>
+        <li class="breadcrumb-item active">Data</li>
+      </ol>
+    </nav>
+  </div>
+  <section class="section">
+    <div class="row my-3">
+      <div class="col">
+        <h2 class="text-center"><mark> TEST_DATA</mark></h2>
+      </div>
+    </div>
+    <div class="row  justify-content-center " style="height:250px;">
+      <div class="col-lg-10 col-sm-10 shadow-lg bg-white rounded ">
+        <form [formGroup]="signInForm" (ngSubmit)="onPost()">
+          <div class="row mt-4 mb-3 justify-content-center">
+            <div class="col-lg-6">
+              <input type="text" readonly class="form-control text-center" id="t1" value="DTSU666">
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t2" formControlName="a_sum" placeholder="A_sum">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t3" formControlName="a_imp" placeholder="A_imp">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t4" formControlName="a_exp" placeholder="A_exp">
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t5" formControlName="pt" placeholder="Pt">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t6" formControlName="pa" placeholder="Pa">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t7" formControlName="pb" placeholder="Pb">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t8" formControlName="pc" placeholder="Pc">
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t9" formControlName="ft" placeholder="Ft">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t10" formControlName="fa" placeholder="Fa">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t11" formControlName="fb" placeholder="Fb">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t12" formControlName="fc" placeholder="Fc">
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t13" formControlName="ua" placeholder="Ua">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t14" formControlName="ub" placeholder="Ub">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t15" formControlName="uc" placeholder="Uc">
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t16" formControlName="ia" placeholder="Ia">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t17" formControlName="ib" placeholder="Ib">
+            </div>
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="t18" formControlName="ic" placeholder="Ic">
+            </div>
+          </div>
+
+          <div class="row justify-content-between">
+            <div class="col-auto my-3">
+              <div>
+                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Post</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Post successful!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" routerLink="/tablerestapi" data-bs-dismiss="modal">Detail</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <a class="btn btn-secondary " routerLink="/tablerestapi" role="button">Cancel</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+

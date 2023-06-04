@@ -1,0 +1,45 @@
+/* Thay đổi màu nền cho phần tử body */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Thay đổi màu chữ cho các phần tử table */
+table,
+th,
+td {
+  color: #212529;
+}
+
+/* Thêm đường viền cho phần tử input */
+.form-control {
+  border: 1px solid #ced4da;
+}
+
+  /* Thay đổi màu nền cho phần tử input khi được focus */
+  .form-control:focus {
+    border-color: #ffc107;
+    box-shadow: none;
+  }
+
+/* Thay đổi kích thước font cho phần tử table */
+.table {
+  font-size: 14px;
+}
+
+  /* Thay đổi kích thước padding cho phần tử table */
+  .table td,
+  .table th {
+    padding: 0.75rem;
+  }
+
+  /* Thay đổi màu nền và màu chữ cho phần tử header của table */
+  .table thead th {
+    background-color: #212529;
+    color: #fff;
+    text-align:center;
+  }
+
+/* Thay đổi màu nền cho phần tử row của table khi hover */
+.table-hover tbody tr:hover {
+  background-color: #f2f2f2;
+}

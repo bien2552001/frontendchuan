@@ -1,0 +1,18 @@
+.row .spinner-grow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 50%;
+  margin-right: 50%;
+  margin-left:50%;
+/*  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+}
+
+.row4 {
+    /*border:dashed;*/
+    font-size:9.5px;
+}

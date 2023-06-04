@@ -1,0 +1,1245 @@
+<main id="main" class="main">
+  <div class="row row1 g-2">
+    <div class="col-lg-4 col-12 cot1_1">
+      <nav>
+        <div class="nav nav-tabs buttonwrapper" id="nav-tab" role="tablist">
+          <div class="row">
+            <nav>
+              <div class="nav nav-tabs buttonwrapper" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="moment" data-bs-toggle="tab" data-bs-target="#nav-day" type="button"
+                        role="tab" aria-controls="nav-day" aria-selected="true">
+                  MOMENT
+                </button>
+                <button class="nav-link" id="today" data-bs-toggle="tab" data-bs-target="#nav-week" type="button"
+                        role="tab" aria-controls="nav-week" aria-selected="false">
+                  TODAY
+                </button>
+                <button class="nav-link" id="lastweek" data-bs-toggle="tab" data-bs-target="#nav-month" type="button"
+                        role="tab" aria-controls="nav-month" aria-selected="false">
+                  LAST WEEK
+                </button>
+                <button class="nav-link" id="custom" data-bs-toggle="tab" data-bs-target="#nav-custom" type="button"
+                        role="tab" aria-controls="nav-custom" aria-selected="false">
+                  CUSTOM
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-4 col-5 cot1_2">
+      <div class="row row2">
+        <div class="col-12">{{hientai}}</div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-7 cot1_3">
+      <div class="row row3">
+        <div class="col-12">
+          <div [ngClass]="'date-indicator'" id="date">Date</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="tab-content" id="nav-tabContent">
+
+      <!---------------------------------------------------------------------MOMENT------------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------MOMENT------------------------------------------------------------------------------->
+      <div class="tab-pane fade show active today-content" id="nav-day" role="tabpanel" aria-labelledby="moment">
+        <div class="row g-2">
+          <!--DTSU666-->
+          <div class="col-lg-9 col-md-9col-md-12">
+            <div class="row g-2">
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">DTSU666</div>
+              </div>
+              <!--Điện áp pha-->
+              <div class="col-lg-4 col-sm-12 col-md-4">
+                <div class="tieude1">Điện áp pha</div>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="td_upha">Ua</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_upha">{{lastDtsuNgay.Ua}} <span>VAc</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_upha">Ub</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_upha">{{lastDtsuNgay.Ub}} <span>VAc</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_upha">Uc</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_upha">{{lastDtsuNgay.Uc}} <span>VAc</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Điện áp dây-->
+              <div class="col-lg-4 col-sm-12 col-md-4">
+                <div class="tieude1">Điện áp dây</div>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="td_uday">Uab</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_uday">{{lastDtsuNgay.Uab}} <span>VAc</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_uday">Ubc</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_uday">{{lastDtsuNgay.Ubc}} <span>VAc</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_uday">Uca</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_uday">{{lastDtsuNgay.Uca}} <span>VAc</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Dòng điện pha-->
+              <div class="col-lg-4 col-sm-12 col-md-4">
+                <div class="tieude1">Dòng điện pha</div>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="td_ipha">Ia</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_ipha">{{lastDtsuNgay.Ia}} <span>A</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_ipha">Ib</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_ipha">{{lastDtsuNgay.Ib}} <span>A</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_ipha">Ic</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_ipha">{{lastDtsuNgay.Ic}} <span>A</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Công suất tiêu thụ pha-->
+              <div class="col-lg-6 col-sm-12 col-md-6">
+                <div class="tieude1">Công suất tiêu thụ pha</div>
+                <div class="row g-0">
+                  <div class="col-3">
+                    <div class="td_ppha">Pft</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_ppha">{{lastDtsu1Ngay.Pft}} <span>W</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_ppha">Pfa</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_ppha">{{lastDtsu1Ngay.Pfa}} <span>W</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_ppha">Pfb</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_ppha">{{lastDtsu1Ngay.Pfb}} <span>W</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_ppha">Pfc</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_ppha">{{lastDtsu1Ngay.Pfc}} <span>W</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Công suất phản kháng pha-->
+              <div class="col-lg-6 col-sm-12 col-md-6">
+                <div class="tieude1">Công suất phản kháng pha</div>
+                <div class="row g-0">
+                  <div class="col-3">
+                    <div class="td_qpha">Qft</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_qpha">{{lastDtsu1Ngay.Qft}} <span>Var</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_qpha">Qfa</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_qpha">{{lastDtsu1Ngay.Qfa}} <span>Var</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_qpha">Qfb</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_qpha">{{lastDtsu1Ngay.Qfb}} <span>Var</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_qpha">Qfc</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_qpha">{{lastDtsu1Ngay.Qfc}} <span>Var</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Hệ số công suất pha-->
+              <div class="col-lg-6 col-sm-12 col-md-6">
+                <div class="tieude1">Hệ số công suất pha</div>
+                <div class="row g-0">
+                  <div class="col-3">
+                    <div class="td_cospha">Cosft</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_cospha">{{lastDtsu1Ngay.Cosft}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_cospha">Cosfa</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_cospha">{{lastDtsu1Ngay.Cosfa}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_cospha">Cosfb</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_cospha">{{lastDtsu1Ngay.Cosfb}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_cospha">Cosfc</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_cospha">{{lastDtsu1Ngay.Cosfc}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Tần số-->
+              <div class="col-lg-6 col-sm-12 col-md-6">
+                <div class="tieude1">Tần số</div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="pzem_hz">{{lastDtsu1Ngay.Hz}} <span>Hz</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Điện năng phản kháng Q-->
+              <div class="col-lg-6 col-sm-12 col-md-6">
+                <div class="tieude1">Điện năng phản kháng</div>
+                <div class="row g-0">
+                  <div class="col-3">
+                    <div class="td_q">Q1</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_q">{{lastDtsu2Ngay.Q1}} <span>kVArh</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_q">Q2</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_q">{{lastDtsu2Ngay.Q2}} <span>kVArh</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_q">Q3</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_q">{{lastDtsu2Ngay.Q3}} <span>kVArh</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="td_q">Q4</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="pzem_q">{{lastDtsu2Ngay.Q4}} <span>kVArh</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Điện năng tiêu thụ P-->
+              <div class="col-lg-6 col-sm-12 col-md-6">
+                <div class="tieude1">Điện năng tiêu thụ</div>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="td_tong">A_sum</div>
+                    <div class="pzem_tong">{{lastDtsu2Ngay.A_sum}} <span>kwh</span></div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_tong">A_imp</div>
+                    <div class="pzem_tong">{{lastDtsu2Ngay.A_imp}} <span>kwh</span></div>
+                  </div>
+                  <div class="col-4">
+                    <div class="td_tong">A_exp</div>
+                    <div class="pzem_tong">{{lastDtsu2Ngay.A_exp}} <span>kwh</span></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--PZEM-017-->
+          <div class="col-lg-3 col-md-12">
+            <div class="row g-2">
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">PZEM-017</div>
+              </div>
+              <!--Điện áp DC-->
+              <div class="col-lg-12 col-6 col-md-6">
+                <div class="tieude1">Điện áp </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="pzem_vdc">{{lastPzem017Ngay.U1}} <span>VDc</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Dòng điện-->
+              <div class="col-lg-12 col-6 col-md-6">
+                <div class="tieude1">Dòng điện </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="pzem_idc">{{lastPzem017Ngay.I1}} <span>A</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Công suất-->
+              <div class="col-lg-12 col-6 col-md-6">
+                <div class="tieude1">Công suất </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="pzem_idc">{{lastPzem017Ngay.P1}} <span>W</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Điện năng-->
+              <div class="col-lg-12 col-6 col-md-6">
+                <div class="tieude1">Điện năng </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="pzem_idc">{{lastPzem017Ngay.A1}} <span>Wh</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!---------------------------------------------------------------------TO DAY------------------------------------------------------------------------------->
+      <div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="today">
+        <div class="row g-2">
+          <!--DTSU666-->
+          <div class="col-lg-6 col-md-12">
+            <div class="row g-2">
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">DTSU666</div>
+              </div>
+              <!--dtsu666-upha-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_dienapphatoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-dongdien-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_dongdienphatoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-cong suat tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_pphatoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-dien nang tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_diennangtieuthutoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--PZEM-017-->
+          <div class="col-lg-6 col-md-12">
+            <div class="row g-2">
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">PZEM-017</div>
+              </div>
+              <!--pzem017-upha-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_dienapphatoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-dongdien-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_dongdientoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-cong suat tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017congsuattoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-cong suat tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017diennangtoday" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------------------------------------------------LAST WEEK------------------------------------------------------------------------------->
+      <div class="tab-pane fade" id="nav-month" role="tabpanel" aria-labelledby="lastweek">
+        <div class="row g-2">
+          <!--DTSU666-->
+          <div class="col-lg-6 col-md-12">
+            <div class="row g-2">
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">DTSU666</div>
+              </div>
+              <!--dtsu666-upha-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_dienapphalastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-dongdien-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_dongienphalastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-cong suat tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_congsuatphalastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-dien nang tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_diennanglastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--PZEM-017-->
+          <div class="col-lg-6 col-md-12">
+            <div class="row g-2">
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">PZEM-017</div>
+              </div>
+              <!--pzem017-upha-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_dienaplastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-dongdien-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_dongdienlastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-cong suat tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_congsuatlastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-cong suat tieu thu-->
+              <div class="col-lg-6 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_diennanglastweek" style="height:210px;"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------------------------------------------------Custom------------------------------------------------------------------------------->
+      <div class="tab-pane fade" id="nav-custom" role="tabpanel" aria-labelledby="custom">
+        <div class="row g-2">
+          <!--Filter-->
+          <div class="col-md-12">
+            <div class="row g-0">
+              <div class="col-lg-12">
+                <div class="row g-2">
+                  <div class="col-sm-6 col-lg-9 custom_col2">
+                    <div class="row">
+                      <!--Dropdown-->
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle buttonfilterdata" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Data </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><button type="button" class="btn" data-bs-toggle="modal" href="#exampleModal1"> DTSU666 </button></li>
+                          <li><button type="button" class="btn" data-bs-toggle="modal" href="#exampleModal2"> PZEM017 </button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-12 col-xl-3">
+                    <div class="row">
+                      <div class="col custom_col1">
+                        <input type="date" id="datea" name="datea" [(ngModel)]="datea" (change)="Dashboard_Custom()" />
+                        <input type="date" id="dateb" name="dateb" [(ngModel)]="dateb" (change)="Dashboard_Custom()" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--DTSU666-->
+          <div class="col-lg-6 col-md-6">
+            <div class="row g-2">
+              <!--button DTSU666-->
+              <!-- Modal DTSU666 -->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div class="col text-center">
+                        <h3 class="modal-title" id="exampleModalLabe1l">ĐỒNG HỒ DTSU666</h3>
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-12">
+                        <div class="row g-0">
+                          <!--Tiêu đề-->
+                          <div class="col-lg-12 bangdemo1">
+                            <div class="row g-0">
+                              <table class="table shadow table-hover table-dark rounded" *ngIf="dtsu66table">
+                                <thead>
+                                  <tr class="text-center">
+                                    <th scope="col">STT</th>
+                                    <th scope="col">NAME</th>
+                                    <th scope="col">A_sum</th>
+                                    <th scope="col">A_imp</th>
+                                    <th scope="col">A_exp</th>
+                                    <th scope="col">Q1</th>
+                                    <th scope="col">Q2</th>
+                                    <th scope="col">Q3</th>
+                                    <th scope="col">Q4</th>
+                                    <th scope="col">Uab</th>
+                                    <th scope="col">Ubc</th>
+                                    <th scope="col">Uca</th>
+                                    <th scope="col">Ua</th>
+                                    <th scope="col">Ub</th>
+                                    <th scope="col">Uc</th>
+                                    <th scope="col">Ia</th>
+                                    <th scope="col">Ib</th>
+                                    <th scope="col">Ic</th>
+                                    <th scope="col">Pft</th>
+                                    <th scope="col">Pfa</th>
+                                    <th scope="col">Pfb</th>
+                                    <th scope="col">Pfc</th>
+                                    <th scope="col">Qft</th>
+                                    <th scope="col">Qfa</th>
+                                    <th scope="col">Qfb</th>
+                                    <th scope="col">Qfc</th>
+                                    <th scope="col">Cosft</th>
+                                    <th scope="col">Cosfa</th>
+                                    <th scope="col">Cosfb</th>
+                                    <th scope="col">Cosfc</th>
+                                    <th scope="col">Hz</th>
+                                    <th scope="col">Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="text-center " *ngFor="let pullcurrent of dtsu66table; let i = index;">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>{{ pullcurrent.Name}}</td>
+                                    <td>{{ pullcurrent.A_sum}}</td>
+                                    <td>{{ pullcurrent.A_imp}}</td>
+                                    <td>{{ pullcurrent.A_exp}}</td>
+                                    <td>{{ pullcurrent.Q1}}</td>
+                                    <td>{{ pullcurrent.Q2}}</td>
+                                    <td>{{ pullcurrent.Q3}}</td>
+                                    <td>{{ pullcurrent.Q4}}</td>
+                                    <td>{{ pullcurrent.Uab}}</td>
+                                    <td>{{ pullcurrent.Ubc}}</td>
+                                    <td>{{ pullcurrent.Uca}}</td>
+                                    <td>{{ pullcurrent.Ua}}</td>
+                                    <td>{{ pullcurrent.Ub}}</td>
+                                    <td>{{ pullcurrent.Uc}}</td>
+                                    <td>{{ pullcurrent.Ia}}</td>
+                                    <td>{{ pullcurrent.Ib}}</td>
+                                    <td>{{ pullcurrent.Ic}}</td>
+                                    <td>{{ pullcurrent.Pft}}</td>
+                                    <td>{{ pullcurrent.Pfa}}</td>
+                                    <td>{{ pullcurrent.Pfb}}</td>
+                                    <td>{{ pullcurrent.Pfc}}</td>
+                                    <td>{{ pullcurrent.Qft}}</td>
+                                    <td>{{ pullcurrent.Qfa}}</td>
+                                    <td>{{ pullcurrent.Qfb}}</td>
+                                    <td>{{ pullcurrent.Qfc}}</td>
+                                    <td>{{ pullcurrent.Cosft}}</td>
+                                    <td>{{ pullcurrent.Cosfa}}</td>
+                                    <td>{{ pullcurrent.Cosfb}}</td>
+                                    <td>{{ pullcurrent.Cosfc}}</td>
+                                    <td>{{ pullcurrent.Hz}}</td>
+                                    <td>{{ pullcurrent.Date}}</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">DTSU666</div>
+              </div>
+              <!--dtsu666-upha-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_dienapphatodaycustom"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-ipha-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_dongdienphacustom"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-p tiêu thụ pha-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_pphacustom"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--dtsu666-Điện năng tiêu thụ ngày-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="dtsu666_diennangtieuthucustom"></canvas>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--PZEM-017-->
+          <div class="col-lg-6 col-md-6">
+            <div class="row g-2">
+              <!--button PZEM017-->
+              <!-- Modal PZEM017 -->
+              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div class="col text-center">
+                        <h3 class="modal-title" id="exampleModalLabel2">ĐỒNG HỒ PZEM-017</h3>
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="col-12">
+                        <div class="row g-0">
+                          <!--Tiêu đề-->
+                          <div class="col-lg-12 bangdemo1">
+                            <div class="row g-0">
+                              <table class="table shadow table-hover table-dark rounded" *ngIf="pzem017table">
+                                <thead>
+                                  <tr class="text-center">
+                                    <th scope="col">STT</th>
+                                    <th scope="col">NAME</th>
+                                    <th scope="col">U1</th>
+                                    <th scope="col">I1</th>
+                                    <th scope="col">P1</th>
+                                    <th scope="col">A1</th>
+                                    <th scope="col">Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="text-center " *ngFor="let pullpzem of pzem017table; let i = index;">
+                                    <td>{{ i + 1 }}</td>
+                                    <td> Đồng hồ Pzem-017 </td>
+                                    <td>{{ pullpzem.U1}} V </td>
+                                    <td>{{ pullpzem.I1}} A </td>
+                                    <td>{{ pullpzem.P1}} W</td>
+                                    <td>{{ pullpzem.A1}} Wh</td>
+                                    <td>{{ pullpzem.Date1}}</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Tiêu đề-->
+              <div class="col-12">
+                <div class="tieude">PZEM017</div>
+              </div>
+              <!--pzem017-upha-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_dienapphacustom"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-dongdien-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017_dongdienphacustom"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-cong suat tieu thu-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017congsuatcustom"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!--pzem017-cong suat tieu thu-->
+              <div class="col-lg-12 col-12">
+                <div class="row g-0 dap-today">
+                  <div class="col-12">
+                    <canvas id="pzem017diennangcustom"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!--<div class="tab-pane fade" id="nav-custom" role="tabpanel" aria-labelledby="custom">
+        <div class="row g-2">-->
+      <!--Filter-->
+      <!--<div class="col-lg-12 col-md-12">
+    <div class="row g-0">
+      <div class="col-lg-12 col-12 ">
+        <div class="row g-2">
+          <div class="col-lg-8 col-sm-12 custom_col2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle buttonfilterdata" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Details
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <button type="button" class="btn" data-bs-toggle="modal" href="#exampleModal1">
+                    DTSU666
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn" data-bs-toggle="modal" href="#exampleModal2">
+                    PZEM017
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <div class="row">
+              <div class="col custom_col1">
+                <input type="date" id="datea" name="datea" [(ngModel)]="datea" (change)="Dashboard_Custom()" />
+                <input type="date" id="dateb" name="dateb" [(ngModel)]="dateb" (change)="Dashboard_Custom()" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+      <!--DTSU666-->
+      <!--<div class="col-lg-6 col-sm-12">
+    <div class="row g-2">-->
+      <!--Tiêu đề-->
+      <!--<div class="col-12">
+    <div class="tieude">DTSU666</div>
+  </div>-->
+      <!-- Modal DTSU666 -->
+      <!--<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+       aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="col text-center">
+            <h3 class="modal-title" id="exampleModalLabe1l">ĐỒNG HỒ DTSU666</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="col-12">
+            <div class="row g-0">-->
+      <!--Tiêu đề-->
+      <!--<div class="col-lg-12 bangdemo1">
+                <div class="row g-0">
+                  <table class="table shadow table-hover table-dark rounded" *ngIf="dtsu66table">
+                    <thead>
+                      <tr class="text-center">
+                        <th scope="col">STT</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">A_sum</th>
+                        <th scope="col">A_imp</th>
+                        <th scope="col">A_exp</th>
+                        <th scope="col">Q1</th>
+                        <th scope="col">Q2</th>
+                        <th scope="col">Q3</th>
+                        <th scope="col">Q4</th>
+                        <th scope="col">Uab</th>
+                        <th scope="col">Ubc</th>
+                        <th scope="col">Uca</th>
+                        <th scope="col">Ua</th>
+                        <th scope="col">Ub</th>
+                        <th scope="col">Uc</th>
+                        <th scope="col">Ia</th>
+                        <th scope="col">Ib</th>
+                        <th scope="col">Ic</th>
+                        <th scope="col">Pft</th>
+                        <th scope="col">Pfa</th>
+                        <th scope="col">Pfb</th>
+                        <th scope="col">Pfc</th>
+                        <th scope="col">Qft</th>
+                        <th scope="col">Qfa</th>
+                        <th scope="col">Qfb</th>
+                        <th scope="col">Qfc</th>
+                        <th scope="col">Cosft</th>
+                        <th scope="col">Cosfa</th>
+                        <th scope="col">Cosfb</th>
+                        <th scope="col">Cosfc</th>
+                        <th scope="col">Hz</th>
+                        <th scope="col">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-center "
+                          *ngFor="let pullcurrent of dtsu66table; let i = index;">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ pullcurrent.Name}}</td>
+                        <td>{{ pullcurrent.A_sum}}</td>
+                        <td>{{ pullcurrent.A_imp}}</td>
+                        <td>{{ pullcurrent.A_exp}}</td>
+                        <td>{{ pullcurrent.Q1}}</td>
+                        <td>{{ pullcurrent.Q2}}</td>
+                        <td>{{ pullcurrent.Q3}}</td>
+                        <td>{{ pullcurrent.Q4}}</td>
+                        <td>{{ pullcurrent.Uab}}</td>
+                        <td>{{ pullcurrent.Ubc}}</td>
+                        <td>{{ pullcurrent.Uca}}</td>
+                        <td>{{ pullcurrent.Ua}}</td>
+                        <td>{{ pullcurrent.Ub}}</td>
+                        <td>{{ pullcurrent.Uc}}</td>
+                        <td>{{ pullcurrent.Ia}}</td>
+                        <td>{{ pullcurrent.Ib}}</td>
+                        <td>{{ pullcurrent.Ic}}</td>
+                        <td>{{ pullcurrent.Pft}}</td>
+                        <td>{{ pullcurrent.Pfa}}</td>
+                        <td>{{ pullcurrent.Pfb}}</td>
+                        <td>{{ pullcurrent.Pfc}}</td>
+                        <td>{{ pullcurrent.Qft}}</td>
+                        <td>{{ pullcurrent.Qfa}}</td>
+                        <td>{{ pullcurrent.Qfb}}</td>
+                        <td>{{ pullcurrent.Qfc}}</td>
+                        <td>{{ pullcurrent.Cosft}}</td>
+                        <td>{{ pullcurrent.Cosfa}}</td>
+                        <td>{{ pullcurrent.Cosfb}}</td>
+                        <td>{{ pullcurrent.Cosfc}}</td>
+                        <td>{{ pullcurrent.Hz}}</td>
+                        <td>{{ pullcurrent.Date}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+      <!--<div class="col-lg-12 col-sm-12 buttondetailcustom">
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+         aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="col text-center">
+              <h3 class="modal-title" id="exampleModalLabe1l">ĐỒNG HỒ DTSU666</h3>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-12">
+              <div class="row g-0">
+                Tiêu đề
+                <div class="col-lg-12 bangdemo1">
+                  <div class="row g-0">
+                    <table class="table shadow table-hover table-dark rounded" *ngIf="dtsu66table">
+                      <thead>
+                        <tr class="text-center">
+                          <th scope="col">STT</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">A_sum</th>
+                          <th scope="col">A_imp</th>
+                          <th scope="col">A_exp</th>
+                          <th scope="col">Q1</th>
+                          <th scope="col">Q2</th>
+                          <th scope="col">Q3</th>
+                          <th scope="col">Q4</th>
+                          <th scope="col">Uab</th>
+                          <th scope="col">Ubc</th>
+                          <th scope="col">Uca</th>
+                          <th scope="col">Ua</th>
+                          <th scope="col">Ub</th>
+                          <th scope="col">Uc</th>
+                          <th scope="col">Ia</th>
+                          <th scope="col">Ib</th>
+                          <th scope="col">Ic</th>
+                          <th scope="col">Pft</th>
+                          <th scope="col">Pfa</th>
+                          <th scope="col">Pfb</th>
+                          <th scope="col">Pfc</th>
+                          <th scope="col">Qft</th>
+                          <th scope="col">Qfa</th>
+                          <th scope="col">Qfb</th>
+                          <th scope="col">Qfc</th>
+                          <th scope="col">Cosft</th>
+                          <th scope="col">Cosfa</th>
+                          <th scope="col">Cosfb</th>
+                          <th scope="col">Cosfc</th>
+                          <th scope="col">Hz</th>
+                          <th scope="col">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center "
+                            *ngFor="let pullcurrent of dtsu66table; let i = index;">
+                          <td>{{ i + 1 }}</td>
+                          <td>{{ pullcurrent.Name}}</td>
+                          <td>{{ pullcurrent.A_sum}}</td>
+                          <td>{{ pullcurrent.A_imp}}</td>
+                          <td>{{ pullcurrent.A_exp}}</td>
+                          <td>{{ pullcurrent.Q1}}</td>
+                          <td>{{ pullcurrent.Q2}}</td>
+                          <td>{{ pullcurrent.Q3}}</td>
+                          <td>{{ pullcurrent.Q4}}</td>
+                          <td>{{ pullcurrent.Uab}}</td>
+                          <td>{{ pullcurrent.Ubc}}</td>
+                          <td>{{ pullcurrent.Uca}}</td>
+                          <td>{{ pullcurrent.Ua}}</td>
+                          <td>{{ pullcurrent.Ub}}</td>
+                          <td>{{ pullcurrent.Uc}}</td>
+                          <td>{{ pullcurrent.Ia}}</td>
+                          <td>{{ pullcurrent.Ib}}</td>
+                          <td>{{ pullcurrent.Ic}}</td>
+                          <td>{{ pullcurrent.Pft}}</td>
+                          <td>{{ pullcurrent.Pfa}}</td>
+                          <td>{{ pullcurrent.Pfb}}</td>
+                          <td>{{ pullcurrent.Pfc}}</td>
+                          <td>{{ pullcurrent.Qft}}</td>
+                          <td>{{ pullcurrent.Qfa}}</td>
+                          <td>{{ pullcurrent.Qfb}}</td>
+                          <td>{{ pullcurrent.Qfc}}</td>
+                          <td>{{ pullcurrent.Cosft}}</td>
+                          <td>{{ pullcurrent.Cosfa}}</td>
+                          <td>{{ pullcurrent.Cosfb}}</td>
+                          <td>{{ pullcurrent.Cosfc}}</td>
+                          <td>{{ pullcurrent.Hz}}</td>
+                          <td>{{ pullcurrent.Date}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+      <!--dtsu666-upha-->
+      <!--<div class="col-lg-12 col-sm-12">
+    <div class="row g-0 dap-today">
+      <div class="col-12">
+        <canvas id="dtsu666_dienapphatodaycustom"></canvas>
+      </div>
+    </div>
+  </div>-->
+      <!--dtsu666-ipha-->
+      <!--<div class="col-lg-12 col-12">
+    <div class="row g-0 dap-today">
+      <div class="col-12">
+        <canvas id="dtsu666_dongdienphacustom"></canvas>
+      </div>
+    </div>
+  </div>-->
+      <!--dtsu666-p tiêu thụ pha-->
+      <!--<div class="col-lg-12 col-12">
+    <div class="row g-0 dap-today">
+      <div class="col-12">
+        <canvas id="dtsu666_pphacustom"></canvas>
+      </div>
+    </div>
+  </div>-->
+      <!--dtsu666-Điện năng tiêu thụ ngày-->
+      <!--<div class="col-lg-12 col-12">
+      <div class="row g-0 dap-today">
+        <div class="col-12">
+          <canvas id="dtsu666_diennangtieuthucustom"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+      </div>-->
+      <!--PZEM-017-->
+      <!--<div class="col-lg-6 col-md-12">
+    <div class="row g-2">-->
+      <!--Tiêu đề-->
+      <!--<div class="col-12">
+    <div class="tieude">PZEM-017</div>
+  </div>
+  <div class="col-lg-2 col-6 buttonpzemdetailcustom">-->
+      <!-- Button trigger modal -->
+      <!-- Modal PZEM017 -->
+      <!--<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+       aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="col text-center">
+            <h3 class="modal-title" id="exampleModalLabel2">ĐỒNG HỒ PZEM-017</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="col-12">
+            <div class="row g-0">-->
+      <!--Tiêu đề-->
+      <!--<div class="col-lg-12 bangdemo1">
+                  <div class="row g-0">
+                    <table class="table shadow table-hover table-dark rounded" *ngIf="pzem017table">
+                      <thead>
+                        <tr class="text-center">
+                          <th scope="col">STT</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">U1</th>
+                          <th scope="col">I1</th>
+                          <th scope="col">P1</th>
+                          <th scope="col">A1</th>
+                          <th scope="col">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center "
+                            *ngFor="let pullpzem of pzem017table; let i = index;">
+                          <td>{{ i + 1 }}</td>
+                          <td> Đồng hồ Pzem-017 </td>
+                          <td>{{ pullpzem.U1}} V </td>
+                          <td>{{ pullpzem.I1}} A </td>
+                          <td>{{ pullpzem.P1}} W</td>
+                          <td>{{ pullpzem.A1}} Wh</td>
+                          <td>{{ pullpzem.Date1}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+      <!--pzem017-upha-->
+      <!--<div class="col-lg-12 col-12">
+    <div class="row g-0 dap-today">
+      <div class="col-12">
+        <canvas id="pzem017_dienapphacustom"></canvas>
+      </div>
+    </div>
+  </div>-->
+      <!--pzem017-dongdien-->
+      <!--<div class="col-lg-12 col-12">
+    <div class="row g-0 dap-today">
+      <div class="col-12">
+        <canvas id="pzem017_dongdienphacustom"></canvas>
+      </div>
+    </div>
+  </div>-->
+      <!--pzem017-cong suat tieu thu-->
+      <!--<div class="col-lg-12 col-12">
+    <div class="row g-0 dap-today">
+      <div class="col-12">
+        <canvas id="pzem017congsuatcustom"></canvas>
+      </div>
+    </div>
+  </div>-->
+      <!--pzem017-cong suat tieu thu-->
+      <!--<div class="col-lg-12 col-12">
+            <div class="row g-0 dap-today">
+              <div class="col-12">
+                <canvas id="pzem017diennangcustom"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>-->
+    </div>
+  </section>
+</main>
